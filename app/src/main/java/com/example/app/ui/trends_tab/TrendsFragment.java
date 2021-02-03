@@ -445,6 +445,7 @@ public class TrendsFragment extends Fragment {
             exerciseTimeLegend.setEnabled(false);
 
             exerciseTimeSet.setColors(new int[]{R.color.scheme_purple_2, R.color.scheme_blue_1, R.color.scheme_blue_2}, this.getContext());
+            // this is the color scheme for the graphs
             exerciseTimeSet.setDrawValues(false);
 
             chart_exerciseTime.setEnabled(false);

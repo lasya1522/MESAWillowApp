@@ -36,6 +36,9 @@ public class GoalsFragment extends Fragment {
     Button btn_addGoal;
     Button btn_pastGoals;
 
+    Button btn_delete;
+    Button btn_complete;
+
     RecyclerView rv_currentGoals;
     RecyclerView.Adapter adapter;
 
@@ -55,6 +58,9 @@ public class GoalsFragment extends Fragment {
         et_goal = root.findViewById(R.id.et_goal);
         btn_addGoal = root.findViewById(R.id.btn_addGoal);
         btn_pastGoals = root.findViewById(R.id.btn_pastGoals);
+
+        btn_complete = root.findViewById(R.id.btn_complete);
+        btn_delete = root.findViewById(R.id.btn_delete);
 
         databaseHelper = new DatabaseHelper(this.getContext());
 
@@ -96,6 +102,11 @@ public class GoalsFragment extends Fragment {
             Intent intent = new Intent(getActivity(), PastGoalsActivity.class);
             startActivity(intent);
         });
+
+        btn_complete.setOnClickListener(v -> {
+            refreshGoals(); //is there a more efficient way to do this, instead of getting the new list of goals every time?
+        });
+
 
 
 

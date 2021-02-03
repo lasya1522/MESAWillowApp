@@ -18,6 +18,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //NEED TO MAKE THE COLUMN NAMES ETC BETTER: ex: both the daily quiz and the journal table have dates and texts so it's confusing
     //strings for the DAILY_QUIZ_TABLE
+
+    //delete these vars
+
     public static final String DAILY_QUIZ_TABLE = "DAILY_QUIZ_TABLE";
     public static final String COLUMN_MOOD = "MOOD";
     public static final String COLUMN_DATE = "DATE";
@@ -74,7 +77,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
        // db.execSQL(createGoalTableStatement);
         String createJournalTableStatement = "CREATE TABLE JOURNAL_TABLE (ID INTEGER PRIMARY KEY AUTOINCREMENT, DATE_JOURNAL TEXT, TEXT_JOURNAL TEXT)";
         db.execSQL(createJournalTableStatement);
-
 
     }
 

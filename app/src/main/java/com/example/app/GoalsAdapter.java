@@ -42,7 +42,7 @@ public class GoalsAdapter extends RecyclerView.Adapter<GoalsAdapter.ViewHolder> 
            String date = getTodayDate();
            DatabaseHelper databaseHelper = new DatabaseHelper(context);
            databaseHelper.completeGoal(holder.checkBox.getText().toString(), date);
-           holder.checkBox.setVisibility(View.GONE);
+          // holder.checkBox.setVisibility(View.GONE);
            //List<Goal> goalsList = databaseHelper.getCurrentGoals();
            //RecyclerView.Adapter adapter = new GoalsAdapter(goalsList, context); //takes 2 arguments
            // rv_currentGoals.setAdapter(adapter);
