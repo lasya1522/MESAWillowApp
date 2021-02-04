@@ -32,10 +32,9 @@
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.971" />
+        app:layout_constraintVertical_bias="0.849" />
 
     <EditText
         android:id="@+id/et_goal"
@@ -68,10 +67,10 @@
         android:id="@+id/rv_currentGoals"
         android:layout_width="337dp"
         android:layout_height="287dp"
-        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:overScrollMode="never"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -96,6 +95,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rv_currentGoals" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
