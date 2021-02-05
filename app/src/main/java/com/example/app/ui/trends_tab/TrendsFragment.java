@@ -497,40 +497,40 @@ public class TrendsFragment extends Fragment {
             chart_stressLevel.setData(stressLevelData);
             chart_stressLevel.invalidate();
 
-            DecimalFormat decimalFormat = new DecimalFormat("##.##"); // does this round or simply truncate??????
+            //DecimalFormat decimalFormat = new DecimalFormat("##.##"); // does this round or simply truncate??????
 
             chart_sleepTime.setData(sleepTimeData);
             chart_sleepTime.invalidate();
-            tv_sleepTimeData.setText("Mean = " + decimalFormat.format(sleepTimeMean) + " hours \n"
-                    + "Median = " + decimalFormat.format(sleepTimeMedian) + " hours \n" +
-                    "Mode = " + decimalFormat.format(sleepTimeMode) + " hours \n" +
-                    "Range = " + decimalFormat.format(sleepTimeRange) + " hours \n" +
+            tv_sleepTimeData.setText("Mean = " + round(sleepTimeMean) + " hours \n"
+                    + "Median = " + round(sleepTimeMedian) + " hours \n" +
+                    "Mode = " + round(sleepTimeMode) + " hours \n" +
+                    "Range = " + round(sleepTimeRange) + " hours \n" +
                     "");
 
             chart_productiveTime.setData(productiveTimeData);
             chart_productiveTime.invalidate();
-            tv_productiveTimeData.setText("Mean = " + decimalFormat.format(productiveTimeMean) + " hours \n" +
-                    "Median = " + decimalFormat.format(productiveTimeMedian) + " hours \n" +
-                    "Mode = " + decimalFormat.format(productiveTimeMode) + " hours \n" +
-                    "Range = " + decimalFormat.format(productiveTimeRange) + " hours \n" +
+            tv_productiveTimeData.setText("Mean = " + round(productiveTimeMean) + " hours \n" +
+                    "Median = " + round(productiveTimeMedian) + " hours \n" +
+                    "Mode = " + round(productiveTimeMode) + " hours \n" +
+                    "Range = " + round(productiveTimeRange) + " hours \n" +
                     "");
 
 
             chart_relaxTime.setData(relaxTimeData);
             chart_relaxTime.invalidate();
-            tv_relaxTimeData.setText("Mean = " + decimalFormat.format(relaxTimeMean) + " hours \n" +
-                    "Median = " + decimalFormat.format(relaxTimeMedian) + " hours \n" +
-                    "Mode = " + decimalFormat.format(relaxTimeMode) + " hours \n" +
-                    "Range = " + decimalFormat.format(relaxTimeRange) + " hours \n" +
+            tv_relaxTimeData.setText("Mean = " + round(relaxTimeMean) + " hours \n" +
+                    "Median = " + round(relaxTimeMedian) + " hours \n" +
+                    "Mode = " + round(relaxTimeMode) + " hours \n" +
+                    "Range = " + round(relaxTimeRange) + " hours \n" +
                     "");
 
 
             chart_exerciseTime.setData(exerciseTimeData);
             chart_exerciseTime.invalidate();
-            tv_exerciseTimeData.setText("Mean = " + decimalFormat.format(exerciseTimeMean) + " hours \n" +
-                    "Median = " + decimalFormat.format(exerciseTimeMedian) + " hours \n" +
-                    "Mode = " + decimalFormat.format(exerciseTimeMode) + " hours \n" +
-                    "Range = " + decimalFormat.format(exerciseTimeRange) + " hours \n" +
+            tv_exerciseTimeData.setText("Mean = " + round(exerciseTimeMean) + " hours \n" +
+                    "Median = " + round(exerciseTimeMedian) + " hours \n" +
+                    "Mode = " + round(exerciseTimeMode) + " hours \n" +
+                    "Range = " + round(exerciseTimeRange) + " hours \n" +
                     "");
 
         }
@@ -587,6 +587,11 @@ public class TrendsFragment extends Fragment {
         Collections.sort(list);
         range = list.get(list.size()-1) - list.get(0);
         return range;
+   }
+
+   private double round(double numb) {
+       numb = Math.round(numb * 100.0) / 100.0;
+       return numb;
    }
 
    /*
