@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.app">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,14 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
-        <activity android:name=".DailyQuizActivity"
+        <activity android:name=".ui.AccountActivity"></activity>
+        <activity
+            android:name=".DailyQuizActivity"
             android:label="Daily Quiz"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".PastQuizzesActivity"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".PastGoalsActivity"/>
-        <activity android:name=".ViewPastQuizActivity"
-            android:parentActivityName=".PastGoalsActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PastQuizzesActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".PastGoalsActivity" />
+        <activity
+            android:name=".ViewPastQuizActivity"
+            android:parentActivityName=".PastGoalsActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -27,8 +33,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".ReminderBroadcast"/>
-        <receiver android:name=".AlertReceiver"/>
+
+        <receiver android:name=".ReminderBroadcast" />
+        <receiver android:name=".AlertReceiver" />
     </application>
 
 </manifest>
