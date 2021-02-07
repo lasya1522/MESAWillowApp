@@ -322,7 +322,7 @@ public class TrendsFragment extends Fragment {
             ValueFormatter formatter = new ValueFormatter() {
                 @Override
                 public String getAxisLabel(float value, AxisBase axis) {
-                    return dates[(int) value ];
+                    return dates[6 - (int)value];
                 }
             };
             xaxis_sleepTime.setValueFormatter(formatter);

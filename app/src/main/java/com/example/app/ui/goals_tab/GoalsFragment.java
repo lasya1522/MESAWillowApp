@@ -103,6 +103,19 @@ public class GoalsFragment extends Fragment {
             startActivity(intent);
         });
 
+       /* btn_delete.setOnClickListener(v-> {
+            for (Goal goal: goalsList){
+                if (goal.getDateCompleted() != null){
+                    Toast.makeText(this.getContext(), "goal has been deleted", Toast.LENGTH_LONG).show();
+                    databaseHelper.deleteGoal(goal);
+                }
+                refreshGoals();
+            }
+
+        });
+
+        */
+
         btn_complete.setOnClickListener(v -> {
             refreshGoals(); //is there a more efficient way to do this, instead of getting the new list of goals every time?
         });
