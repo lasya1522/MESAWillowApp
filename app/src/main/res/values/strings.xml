@@ -1,11 +1,11 @@
 <resources>
+    <!--App Titles and Headers -->
     <string name="app_name">Willow</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Stress</string>
     <string name="title_notifications">Sleep</string>
     <string name="title_daily">Daily Life</string>
     <string name="title_data">Data</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textView">TextView</string>
     <string name="morning_quiz">Morning Quiz</string>
@@ -13,6 +13,8 @@
     <string name="sleep">Sleep</string>
 
 
+    <!--Titles/Headers -->
+    <string name="view_the_daily_quiz">View the Daily Quiz</string>
     <string name="ViewQuizzes">View today\'s quizzes!</string>
     <string name="relax_time">How much time did you spend being productive?</string>
     <string name="relax_timeQ">How much time did you spend relaxing?</string>

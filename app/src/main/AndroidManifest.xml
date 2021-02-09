@@ -12,7 +12,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
-        <activity android:name=".ui.AccountActivity"></activity>
+        <activity android:name=".AccountActivity">
+        </activity>
+        <activity android:name=".SignUpActivity">
+
+        </activity>
         <activity
             android:name=".DailyQuizActivity"
             android:label="Daily Quiz"

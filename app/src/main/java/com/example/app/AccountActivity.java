@@ -1,10 +1,8 @@
-package com.example.app.ui;
+package com.example.app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import com.example.app.R;
 
 public class AccountActivity extends AppCompatActivity {
 
