@@ -12,10 +12,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.app.DailyQuiz;
 import com.example.app.DatabaseHelper;
+import com.example.app.GoalsAdapter;
 import com.example.app.R;
+import com.example.app.StressorsAdapter;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -60,6 +63,12 @@ public class TrendsFragment extends Fragment {
     BarChart chart_relaxTime;
     BarChart chart_exerciseTime;
 
+    RecyclerView rv_stressors;
+    RecyclerView rv_other;
+
+    RecyclerView.Adapter stressorsAdapter;
+    RecyclerView.Adapter otherAdapter;
+
     DatabaseHelper databaseHelper;
     List<DailyQuiz> dailyQuizData;
 
@@ -86,6 +95,8 @@ public class TrendsFragment extends Fragment {
         chart_relaxTime = root.findViewById(R.id.chart_relaxTime);
         chart_exerciseTime = root.findViewById(R.id.chart_exerciseTime);
 
+        rv_stressors = root.findViewById(R.id.rv_stressors);
+        rv_other = root.findViewById(R.id.rv_other);
 
         dailyQuizData = databaseHelper.getDailyQuizData();
 
@@ -532,6 +543,9 @@ public class TrendsFragment extends Fragment {
                     "Mode = " + round(exerciseTimeMode) + " hours \n" +
                     "Range = " + round(exerciseTimeRange) + " hours \n" +
                     "");
+
+            stressorsAdapter = new StressorsAdapter(dailyQuizData, this.getContext()); //takes 2 arguments?
+            rv_stressors.setAdapter(stressorsAdapter);
 
         }
         return root;

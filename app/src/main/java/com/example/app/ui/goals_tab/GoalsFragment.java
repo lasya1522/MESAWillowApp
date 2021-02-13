@@ -64,7 +64,7 @@ public class GoalsFragment extends Fragment {
 
         databaseHelper = new DatabaseHelper(this.getContext());
 
-        rv_currentGoals = (RecyclerView)root.findViewById(R.id.rv_currentGoals);
+        rv_currentGoals = root.findViewById(R.id.rv_currentGoals);
         rv_currentGoals.setHasFixedSize(true);
         rv_currentGoals.setLayoutManager(new LinearLayoutManager((this.getContext())));
 
