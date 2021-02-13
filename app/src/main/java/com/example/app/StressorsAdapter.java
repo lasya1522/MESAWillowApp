@@ -13,9 +13,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class StressorsAdapter extends RecyclerView.Adapter<StressorsAdapter.ViewHolder> {
@@ -50,7 +47,6 @@ public class StressorsAdapter extends RecyclerView.Adapter<StressorsAdapter.View
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         public TextView tv_stressor;
-        public DatabaseHelper databaseHelper;
         public Context context;
 
         public ViewHolder(@NonNull View itemView) {

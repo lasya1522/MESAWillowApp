@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.app.DailyQuiz;
@@ -96,7 +97,12 @@ public class TrendsFragment extends Fragment {
         chart_exerciseTime = root.findViewById(R.id.chart_exerciseTime);
 
         rv_stressors = root.findViewById(R.id.rv_stressors);
+        rv_stressors.setHasFixedSize(true);
+        rv_stressors.setLayoutManager(new LinearLayoutManager((this.getContext())));
+
         rv_other = root.findViewById(R.id.rv_other);
+        rv_other.setHasFixedSize(true);
+        rv_other.setLayoutManager(new LinearLayoutManager((this.getContext())));
 
         dailyQuizData = databaseHelper.getDailyQuizData();
 
