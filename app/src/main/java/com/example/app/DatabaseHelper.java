@@ -70,6 +70,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    //ID Integer Primary key autoincrement- what is that? check to make sure not plagiarism
+
     //called if the database version number changes. It prevents previous user's apps from breaking when you change the database design
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -267,5 +269,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor2 = db.rawQuery(queryStringGoal, null);
         do {
         } while(cursor2.moveToNext());
+    }
+
+    public boolean deleteGoal(Goal goal){
+        SQLiteDatabase db = this.getWritableDatabase();
+        String queryString = "DELETE FROM " + GOAL_TABLE + " WHERE " + COLUMN_GOAL  + " = \"" + goal.getGoalText() + "\"";
+        Cursor cursor = db.rawQuery(queryString, null);
+        if (cursor.moveToFirst()){
+            return true;
+        } else {
+            return false;
+        }
     }
 }

@@ -27,14 +27,14 @@
         android:id="@+id/btn_pastGoals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="478dp"
         android:insetTop="0dp"
         android:text="Past Goals"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.849" />
+        app:layout_constraintTop_toTopOf="@+id/et_goal" />
 
     <EditText
         android:id="@+id/et_goal"
@@ -67,11 +67,11 @@
         android:id="@+id/rv_currentGoals"
         android:layout_width="337dp"
         android:layout_height="287dp"
+        android:overScrollMode="never"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:overScrollMode="never"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/et_goal" />
 
     <Button
         android:id="@+id/btn_complete"
