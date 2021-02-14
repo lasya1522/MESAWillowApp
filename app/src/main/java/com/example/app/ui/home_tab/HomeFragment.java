@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CalendarView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,9 +38,11 @@ public class HomeFragment extends Fragment {
     Button btn_dailyQuiz;
 
     DatabaseHelper databaseHelper;
-    CardView dq;
+
 
     ImageView lock;
+
+    CalendarView cv;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -50,6 +53,7 @@ public class HomeFragment extends Fragment {
 
         btn_dailyQuiz = root.findViewById(R.id.viewQuiz);
         lock = root.findViewById(R.id.lock);
+
 
         databaseHelper = new DatabaseHelper(this.getContext());
         if (databaseHelper.getDailyQuiz(getTodayDate()).getDate().equals("")){
