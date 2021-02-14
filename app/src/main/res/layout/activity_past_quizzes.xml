@@ -23,8 +23,8 @@
 
     <Button
         android:id="@+id/btn_viewQuiz"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="186dp"
+        android:layout_height="78dp"
         android:text="View Quiz!"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,8 +51,8 @@
 
     <ImageView
         android:id="@+id/datePicker"
-        android:layout_width="94dp"
-        android:layout_height="84dp"
+        android:layout_width="104dp"
+        android:layout_height="82dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/datePickerBtn"
         app:layout_constraintTop_toTopOf="parent"

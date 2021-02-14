@@ -99,99 +99,98 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-                xmlns:card_view="http://schemas.android.com/apk/res-auto"
-                android:id = "@+id/sleepTime_card"
-                android:layout_margin="5dp"
-                android:layout_gravity="center"
+                android:id="@+id/sleepTime_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                card_view:cardCornerRadius = "10dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_purple2"
-                >
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/scheme_pastel_purple3"
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_gravity="center_horizontal"
-                android:text="How many hours did you sleep last night?"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.369"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.253" />
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:text="How many hours did you sleep last night?"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.369"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.253" />
 
 
-            <EditText
-                android:id="@+id/et_sleepTime"
-                android:layout_width="328dp"
-                android:layout_height="47dp"
-                android:layout_margin="5dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="number" />
+                    <EditText
+                        android:id="@+id/et_sleepTime"
+                        android:layout_width="328dp"
+                        android:layout_height="47dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number" />
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="Rate your sleep"
-                android:layout_margin="10dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.369"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.456" />
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10dp"
+                        android:text="Rate your sleep"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.369"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.456" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup3"
-                android:layout_width="317dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="2.3"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-                app:layout_constraintVertical_bias="0.121">
+                    <RadioGroup
+                        android:id="@+id/radioGroup3"
+                        android:layout_width="317dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="2.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+                        app:layout_constraintVertical_bias="0.121">
 
-                <RadioButton
-                    android:id="@+id/btn_sleepRating1"
-                    android:layout_width="116dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sleepRating1"
-                    android:textSize="16sp" />
+                        <RadioButton
+                            android:id="@+id/btn_sleepRating1"
+                            android:layout_width="116dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sleepRating1"
+                            android:textSize="16sp" />
 
-                <RadioButton
-                    android:id="@+id/btn_sleepRating2"
-                    android:layout_width="115dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rating2"
-                    android:textSize="16sp" />
+                        <RadioButton
+                            android:id="@+id/btn_sleepRating2"
+                            android:layout_width="115dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rating2"
+                            android:textSize="16sp" />
 
-                <RadioButton
-                    android:id="@+id/btn_sleepRating3"
-                    android:layout_width="103dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/rating3"
-                    android:textSize="16sp" />
-            </RadioGroup></LinearLayout>
+                        <RadioButton
+                            android:id="@+id/btn_sleepRating3"
+                            android:layout_width="103dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rating3"
+                            android:textSize="16sp" />
+                    </RadioGroup>
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
