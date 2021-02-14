@@ -87,8 +87,16 @@ public class ViewPastQuizActivity extends AppCompatActivity {
             tv_relaxTime.setText("Hours spent relaxing: " + dailyQuiz.getRelaxTime().toString());
             tv_exerciseTime.setText("Hours spend exercising: " + dailyQuiz.getExerciseTime().toString());
             tv_stressLevel.setText("Stress levels: " + dailyQuiz.getStressLevel());
-            tv_stressors.setText("Stressors: " + dailyQuiz.getStressors());
-            tv_other.setText("Other notes: " + dailyQuiz.getOther());
+            if (dailyQuiz.getStressors().equals("")){
+                tv_stressors.setText("Stressors: N/A");
+            } else {
+                tv_stressors.setText("Stressors: " + dailyQuiz.getStressors());
+            }
+            if (dailyQuiz.getOther().equals("")){
+                tv_other.setText("Other: N/A");
+            } else {
+                tv_other.setText("Other notes: " + dailyQuiz.getOther());
+            }
         }
 
 
