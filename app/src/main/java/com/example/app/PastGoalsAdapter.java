@@ -33,7 +33,7 @@ public class PastGoalsAdapter extends RecyclerView.Adapter<PastGoalsAdapter.View
         Goal goal = goals.get(position);
 
        holder.tv_text.setText(goal.getGoalText());
-       holder.tv_dateCompleted.setText(goal.getDateCompleted());
+       holder.tv_dateCompleted.setText("Completed " + goal.getDateCompleted());
 
     }
 
