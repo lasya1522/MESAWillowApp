@@ -70,43 +70,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.209" />
 
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="384dp"
-                android:layout_height="159dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="          Willow is an app made by students, for students. Willow is used to assist users in tracking their mental health by monitoring various aspects of their daily lives through giving daily quizzes. The app can be used by people who want to reflect on themselves by tracking their mental health or by professionals who want to use a patient's personal data to assist their patients as best as possible. "
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.365" />
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="386dp"
-                android:layout_height="129dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:text="          In this app, you can take daily quizzes, maintain a journal, set goals, and review results collected to update how you are feeling and see how your data trends over time. Our goal is to help students track their mental health for personal reflection and so that they can get suitable help from professionals."
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.491"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.646" />
-
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
@@ -142,25 +105,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView12"
                 app:layout_constraintVertical_bias="1.0" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="116dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:text="Thank you!"
-                android:textSize="23sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.905" />
 
             <TextView
                 android:id="@+id/tv_viewAlarmTime"
