@@ -71,8 +71,8 @@ public class DailyQuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_daily_quiz);
 
         //Underline quiz title
-        TextView quizTitle = (TextView) findViewById(R.id.dailyQuizTitle);
-        quizTitle.setPaintFlags(quizTitle.getPaintFlags()|Paint.UNDERLINE_TEXT_FLAG);
+       // TextView quizTitle = (TextView) findViewById(R.id.dailyQuizTitle);
+       // quizTitle.setPaintFlags(quizTitle.getPaintFlags()|Paint.UNDERLINE_TEXT_FLAG);
 
         btn_mood1 = findViewById(R.id.btn_mood1);
         btn_mood2 = findViewById(R.id.btn_mood2);

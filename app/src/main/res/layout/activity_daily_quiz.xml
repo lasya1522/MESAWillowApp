@@ -22,23 +22,32 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/dailyQuizTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_gravity="center_horizontal"
-                android:text="Daily Quiz"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/mood_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "10dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_purple"
+                >
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/question1"
-                android:textSize="16sp"
+                android:text = "Rate your mood"
+                android:gravity="center"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -51,6 +60,7 @@
                 android:layout_height="32dp"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toBottomOf="@+id/textView10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.27"
@@ -84,13 +94,35 @@
 
             </RadioGroup>
 
+           </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/sleepTime_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "10dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_purple2"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
-                android:text="2. How many hours did you sleep last night?"
-                android:textSize="16sp"
+                android:text="How many hours did you sleep last night?"
+                android:gravity="center"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -104,6 +136,7 @@
                 android:id="@+id/et_sleepTime"
                 android:layout_width="328dp"
                 android:layout_height="47dp"
+                android:layout_margin="5dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:ems="10"
@@ -114,8 +147,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="3. Rate your sleep"
-                android:textSize="16sp"
+                android:text="Rate your sleep"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -157,16 +191,36 @@
                     android:layout_height="wrap_content"
                     android:text="@string/rating3"
                     android:textSize="16sp" />
-            </RadioGroup>
+            </RadioGroup></LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/productiveTime_card"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius = "10dp"
+            card_view:cardBackgroundColor="@color/scheme_pastel_blue1"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="4. How many hours did you spend being produtive?"
-                android:textSize="16sp"
+                android:text="How many hours did you spend being productive?"
+                android:gravity="center"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.369"
@@ -180,19 +234,41 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
+                android:layout_margin="10dp"
                 android:ems="10"
                 android:inputType="number"
                 android:autofillHints=""
                 tools:ignore="LabelFor" />
 
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/relaxTime_card"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius = "10dp"
+            card_view:cardBackgroundColor="@color/scheme_pastel_blue2"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="339dp"
-                android:layout_height="36dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="5. How many hours did you spend relaxing?"
-                android:textSize="16sp"
+                android:text="How many hours did you spend relaxing?"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:gravity="center"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.369"
@@ -204,6 +280,8 @@
                 android:id="@+id/et_relaxTime"
                 android:layout_width="293dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:ems="10"
@@ -211,14 +289,36 @@
                 android:autofillHints=""
                 tools:ignore="LabelFor" />
 
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/exerciseTime_card"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius = "10dp"
+            card_view:cardBackgroundColor="@color/scheme_pastel_blue3"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="6. How many hours did you spend exercising?"
-                android:textSize="16sp"
+                android:text="How many hours did you spend exercising?"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.369"
@@ -230,26 +330,51 @@
                 android:id="@+id/et_exerciseTime"
                 android:layout_width="295dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="number" />
 
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/stressLevel_card"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius = "10dp"
+            card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="7. Rate your stress level"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:text="Rate your stress level"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
 
             <RadioGroup
                 android:layout_width="277dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.564"
@@ -285,9 +410,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/question8"
-                android:textSize="16sp"
+                android:text="What contributed to your stress?"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.645"
@@ -297,6 +424,8 @@
 
             <EditText
                 android:id="@+id/et_stressors"
+                android:layout_margin="10dp"
+                android:gravity="center"
                 android:layout_width="271dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -311,14 +440,36 @@
                 app:layout_constraintVertical_bias="1.0"
                 tools:ignore="MissingConstraints" />
 
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id = "@+id/other_card"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius = "10dp"
+            card_view:cardBackgroundColor="@color/scheme_pastel_blue1"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/question9"
-                android:layout_width="260dp"
-                android:layout_height="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/question9"
-                android:textSize="16sp"
+                android:text="Any other notes about your day?"
+                android:textSize="20sp"
                 android:textStyle="bold"
+                android:layout_margin="10dp"
+                android:gravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.42"
@@ -328,7 +479,9 @@
 
             <EditText
                 android:id="@+id/et_other"
-                android:layout_width="280dp"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:ems="10"
@@ -340,6 +493,9 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.905" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
             <Button
                 android:id="@+id/btn_submit"

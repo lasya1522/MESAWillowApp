@@ -27,6 +27,7 @@
                 android:text="Trends (Past Week)"
                 android:textAlignment="center"
                 android:textSize="25dp"
+                android:textColor="@color/black"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_purple"
+                card_view:cardBackgroundColor="@color/scheme_green_1"
                 >
 
             <TextView
@@ -53,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="Mood"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
@@ -293,6 +295,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:text="@string/stressors"/>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -320,7 +324,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/other"
-                android:layout_margin="20dp"/>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_other"
