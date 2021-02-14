@@ -5,6 +5,15 @@
     <color name= "scheme_purple_1">#A780D5</color>
     <color name = "scheme_purple_2">#BFB3EA</color>
     <color name = "scheme_green_1">#3AA88E</color>
+    <color name = "scheme_pastel_purple">#D8CEFF</color>
+    <color name = "scheme_pastel_blue1">#CEE4FF</color>
+    <color name = "scheme_pastel_blue2">#D6D3FD</color>
+    <color name = "scheme_pastel_blue3">#E7FCFF</color>
+    <color name = "scheme_pastel_purple2">#FDF2B9FB</color>
+    <color name = "scheme_pastel_purple3">#C7BBFD</color>
+
+
+
 
     <color name= "purple_graph_1">#BFB3EA</color>
     <color name= "purple_graph_2">#B192E4</color>

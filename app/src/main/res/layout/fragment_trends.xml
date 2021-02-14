@@ -17,6 +17,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+
             <TextView
                 android:id="@+id/trendTitle"
                 android:layout_width="match_parent"
@@ -35,10 +36,22 @@
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="RtlCompat,Suspicious0dp" />
 
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/mood_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_purple"
+                >
+
             <TextView
                 android:id="@+id/moodPieChartTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="Mood"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -46,45 +59,99 @@
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/chart_mood"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id = "@+id/sleepTime_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius= "15dp"
+                app:cardBackgroundColor="@color/scheme_pastel_blue1"
+                >
 
             <TextView
                 android:id="@+id/sleepTimeBarTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Amount of Sleep (hours) "
+                android:layout_margin="20dp"
+                android:text="Amount of Sleep (hours)"
+                app:layout_constraintBottom_toTopOf="@id/chart_sleepTime"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                />
 
-            <com.github.mikephil.charting.charts.BarChart
-                android:id="@+id/chart_sleepTime"
-                android:layout_width="match_parent"
-                android:layout_height="166dp" />
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart_sleepTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_margin="20dp"
+                    android:padding="20dp">
 
-            <TextView
-                android:id="@+id/tv_sleepTimeData"
+                </com.github.mikephil.charting.charts.BarChart>
+
+                <TextView
+                    android:id="@+id/tv_sleepTimeData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:textSize="12sp"
+                    android:textStyle="bold">
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/sleepRating_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:textStyle="bold" />
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_blue2"
+                >
 
             <TextView
                 android:id="@+id/textView23"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sleep Quality"
+                android:layout_margin="20dp"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/chart_sleepRating"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/productiveTime_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_blue3"
+                >
 
             <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="Productivity (hours)"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -92,7 +159,9 @@
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/chart_productiveTime"
                 android:layout_width="match_parent"
-                android:layout_height="166dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                />
 
             <TextView
                 android:id="@+id/tv_productiveTimeData"
@@ -100,12 +169,27 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textStyle="bold"
+                android:layout_margin="20dp"
                 />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/relaxTime_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_purple2"
+                >
 
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
                 android:text="Relaxation (hours) "
                 android:textSize="18sp"
                 android:textStyle="bold"/>
@@ -113,7 +197,8 @@
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/chart_relaxTime"
                 android:layout_width="match_parent"
-                android:layout_height="166dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/tv_relaxTimeData"
@@ -121,21 +206,37 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textStyle="bold"
+                android:layout_margin="20dp"
                 />
 
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/exerciseTime_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+                >
 
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Exercise (hours)"
+                android:layout_margin="20dp"
                 android:textSize="18sp"
                 android:textStyle="bold"/>
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/chart_exerciseTime"
                 android:layout_width="match_parent"
-                android:layout_height="166dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"/>
 
             <TextView
                 android:id="@+id/tv_exerciseTimeData"
@@ -143,7 +244,21 @@
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
                 android:textStyle="bold"
+                android:layout_margin="20dp"
                 />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/stressLevel_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+                >
 
             <TextView
                 android:id="@+id/textView22"
@@ -151,35 +266,69 @@
                 android:layout_height="wrap_content"
                 android:text="Stress Level"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_margin="20dp"/>
 
             <com.github.mikephil.charting.charts.PieChart
                 android:id="@+id/chart_stressLevel"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/stressors_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_blue1"
+                >
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:text="@string/stressors"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="@string/stressors"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_stressors"
                 android:layout_width="match_parent"
-                android:layout_height="100dp" />
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                android:overScrollMode="never"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id = "@+id/other_card"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardCornerRadius = "15dp"
+                card_view:cardBackgroundColor="@color/scheme_pastel_blue2"
+                >
 
             <TextView
                 android:id="@+id/textView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/other" />
+                android:text="@string/other"
+                android:layout_margin="20dp"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_other"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:overScrollMode="never"/>
+                android:layout_height="200dp"
+                android:overScrollMode="never"
+                android:layout_margin="20dp"/>
+            </androidx.cardview.widget.CardView>
 
 
         </LinearLayout>

@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.app.DailyQuiz;
 import com.example.app.DatabaseHelper;
 import com.example.app.GoalsAdapter;
+import com.example.app.OtherAdapter;
 import com.example.app.R;
 import com.example.app.StressorsAdapter;
 import com.github.mikephil.charting.charts.BarChart;
@@ -552,6 +553,9 @@ public class TrendsFragment extends Fragment {
 
             stressorsAdapter = new StressorsAdapter(dailyQuizData, this.getContext()); //takes 2 arguments?
             rv_stressors.setAdapter(stressorsAdapter);
+
+            otherAdapter = new OtherAdapter(dailyQuizData, this.getContext());
+            rv_other.setAdapter(otherAdapter);
 
         }
         return root;
