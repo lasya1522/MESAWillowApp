@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+                card_view:cardBackgroundColor="@color/mood_color"
                 >
 
             <TextView
@@ -72,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius= "15dp"
-                app:cardBackgroundColor="@color/scheme_pastel_blue1"
+                app:cardBackgroundColor="@color/sleep_color"
                 >
 
                 <LinearLayout
@@ -125,7 +125,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_blue2"
+                card_view:cardBackgroundColor="@color/sleep_color"
                 >
 
                 <TextView
@@ -154,7 +154,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_blue3"
+                card_view:cardBackgroundColor="@color/productive_color"
                 >
 
                 <LinearLayout
@@ -202,7 +202,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_purple2"
+                card_view:cardBackgroundColor="@color/relax_color"
                 >
 
                 <LinearLayout
@@ -249,7 +249,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+                card_view:cardBackgroundColor="@color/exercise_color"
                 >
 
                 <LinearLayout
@@ -295,7 +295,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+                card_view:cardBackgroundColor="@color/stress_color"
                 >
 
             <TextView
@@ -323,7 +323,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_blue1"
+                card_view:cardBackgroundColor="@color/stress_color"
                 >
 
                 <LinearLayout
@@ -359,7 +359,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "15dp"
-                card_view:cardBackgroundColor="@color/scheme_pastel_blue2"
+                card_view:cardBackgroundColor="@color/other_color"
                 >
 
                 <LinearLayout

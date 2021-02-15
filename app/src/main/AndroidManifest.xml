@@ -13,10 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
         <activity android:name=".AccountActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SignUpActivity">
 
@@ -35,6 +31,12 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
 
         <receiver android:name=".ReminderBroadcast" />

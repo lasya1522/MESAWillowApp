@@ -13,9 +13,42 @@
     <color name = "scheme_pastel_purple3">#C7BBFD</color>
 
 
-    <color name="base_color">#81E8B0</color>
+    <color name="base_color">#3BB6ED</color>
 
+    <color name= "mood_color">#E1D4F6</color>
+    <color name= "mood_color2">#A88CD8</color>
+    <color name= "mood_color3">#775BA8</color>
+    <color name= "mood_color4">#4D3871</color>
 
+    <color name= "sleep_color">#CDD3F3</color>
+    <color name= "sleep_color2">#9CA7ED</color>
+    <color name= "sleep_color3">#616EBA</color>
+    <color name= "sleep_color4">#3E4A8E</color>
+
+    <color name= "exercise_color">#DEFAF7</color>
+    <color name= "exercise_color2">#72B6B0</color>
+    <color name= "exercise_color3">#538E88</color>
+    <color name= "exercise_color4">#3D7A74</color>
+
+    <color name= "productive_color">#C2E2F3</color>
+    <color name= "productive_color2">#74AFCA</color>
+    <color name= "productive_color3">#4496BC</color>
+    <color name= "productive_color4">#1693CC</color>
+
+    <color name= "relax_color">#F0DAF4</color>
+    <color name= "relax_color2">#C78BD1</color>
+    <color name= "relax_color3">#C673D5</color>
+    <color name= "relax_color4">#AF5DBD</color>
+
+    <color name= "stress_color">#E2F6E3</color>
+    <color name= "stress_color2">#99D89B</color>
+    <color name= "stress_color3">#7BCD7E</color>
+    <color name= "stress_color4">#6DF172</color>
+
+    <color name= "other_color">#ECE3FD</color>
+    <color name= "other_color2">#876BBA</color>
+    <color name= "other_color3">#685093</color>
+    <color name= "other_color4">#685093</color>
 
 
     <color name= "purple_graph_1">#BFB3EA</color>
@@ -32,4 +65,5 @@
     <color name="purple_550" />
     <color name="blue_800">#1E2964</color>
     <color name="blue_880">#222368</color>
+
 </resources>

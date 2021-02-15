@@ -267,7 +267,7 @@ public class TrendsFragment extends Fragment {
             Legend moodLegend = chart_mood.getLegend();
             moodLegend.setEnabled(false);
 
-            moodSet.setColors(new int[]{R.color.scheme_blue_1, R.color.scheme_blue_2, R.color.scheme_purple_1}, this.getContext());
+            moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, this.getContext());
             moodSet.setDrawValues(false);
 
             chart_mood.setHoleRadius(0);
@@ -280,7 +280,7 @@ public class TrendsFragment extends Fragment {
             Legend sleepRatingLegend = chart_sleepRating.getLegend();
             sleepRatingLegend.setEnabled(false);
 
-            sleepRatingSet.setColors(new int[]{R.color.scheme_green_1, R.color.scheme_blue_1, R.color.scheme_blue_2}, this.getContext());
+            sleepRatingSet.setColors(new int[]{R.color.sleep_color2, R.color.sleep_color3, R.color.sleep_color4}, this.getContext());
             sleepRatingSet.setDrawValues(false);
 
             chart_sleepRating.setHoleRadius(0);
@@ -294,7 +294,7 @@ public class TrendsFragment extends Fragment {
             Legend stressLevelLegend = chart_stressLevel.getLegend();
             stressLevelLegend.setEnabled(false);
 
-            stressLevelSet.setColors(new int[]{R.color.scheme_blue_2, R.color.scheme_purple_1, R.color.scheme_purple_2}, this.getContext());
+            stressLevelSet.setColors(new int[]{R.color.stress_color2, R.color.stress_color3, R.color.stress_color4}, this.getContext());
             stressLevelSet.setDrawValues(false);
 
             chart_stressLevel.setHoleRadius(0);
@@ -308,7 +308,7 @@ public class TrendsFragment extends Fragment {
             Legend sleepTimeLegend = chart_sleepTime.getLegend();
             sleepTimeLegend.setEnabled(false);
 
-            sleepTimeSet.setColors(new int[]{R.color.scheme_blue_1, R.color.scheme_blue_2, R.color.scheme_purple_1}, this.getContext());
+            sleepTimeSet.setColors(new int[]{R.color.sleep_color2, R.color.sleep_color3, R.color.sleep_color4}, this.getContext());
             sleepTimeSet.setDrawValues(false);
 
             chart_sleepTime.setEnabled(false);
@@ -365,7 +365,7 @@ public class TrendsFragment extends Fragment {
             Legend productiveTimeLegend = chart_productiveTime.getLegend();
             productiveTimeLegend.setEnabled(false);
 
-            productiveTimeSet.setColors(new int[]{R.color.scheme_blue_2, R.color.scheme_purple_1, R.color.scheme_purple_2}, this.getContext());
+            productiveTimeSet.setColors(new int[]{R.color.productive_color2, R.color.productive_color3, R.color.productive_color4}, this.getContext());
             productiveTimeSet.setDrawValues(false);
 
             chart_productiveTime.setEnabled(false);
@@ -414,7 +414,7 @@ public class TrendsFragment extends Fragment {
             Legend relaxTimeLegend = chart_relaxTime.getLegend();
             relaxTimeLegend.setEnabled(false);
 
-            relaxTimeSet.setColors(new int[]{R.color.scheme_purple_1, R.color.scheme_purple_2, R.color.scheme_blue_1}, this.getContext());
+            relaxTimeSet.setColors(new int[]{R.color.relax_color2, R.color.relax_color3, R.color.relax_color4}, this.getContext());
             relaxTimeSet.setDrawValues(false);
 
             chart_relaxTime.setEnabled(false);
@@ -462,7 +462,7 @@ public class TrendsFragment extends Fragment {
             Legend exerciseTimeLegend = chart_exerciseTime.getLegend();
             exerciseTimeLegend.setEnabled(false);
 
-            exerciseTimeSet.setColors(new int[]{R.color.scheme_purple_2, R.color.scheme_blue_1, R.color.scheme_blue_2}, this.getContext());
+            exerciseTimeSet.setColors(new int[]{R.color.exercise_color2, R.color.exercise_color3, R.color.exercise_color4}, this.getContext());
             // this is the color scheme for the graphs
             exerciseTimeSet.setDrawValues(false);
 
