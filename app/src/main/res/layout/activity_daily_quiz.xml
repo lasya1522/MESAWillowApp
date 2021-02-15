@@ -20,7 +20,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="@color/black">
 
             <androidx.cardview.widget.CardView
                 xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -30,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardCornerRadius = "10dp"
-                card_view:cardBackgroundColor="@color/mood_color"
+                card_view:cardBackgroundColor="@color/base_color2"
                 >
 
            <LinearLayout
@@ -104,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                app:cardBackgroundColor="@color/sleep_color"
+                app:cardBackgroundColor="@color/base_color4"
                 app:cardCornerRadius="10dp">
 
                 <LinearLayout
@@ -202,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/productive_color"
+            card_view:cardBackgroundColor="@color/base_color3"
             >
 
         <LinearLayout
@@ -250,7 +251,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/relax_color"
+            card_view:cardBackgroundColor="@color/base_color2"
             >
 
         <LinearLayout
@@ -281,6 +282,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center"
+                android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:ems="10"
@@ -300,7 +302,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/exercise_color"
+            card_view:cardBackgroundColor="@color/base_color4"
             >
 
         <LinearLayout
@@ -330,6 +332,7 @@
                 android:layout_width="295dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:textAlignment="center"
                 android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
@@ -347,7 +350,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/stress_color"
+            card_view:cardBackgroundColor="@color/base_color3"
             >
 
         <LinearLayout
@@ -429,6 +432,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:ems="10"
+                android:textAlignment="center"
                 android:hint="@string/hintText"
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toBottomOf="@+id/textView6"
@@ -451,7 +455,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/other_color"
+            card_view:cardBackgroundColor="@color/base_color2"
             >
 
         <LinearLayout
@@ -484,6 +488,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:ems="10"
+                android:textAlignment="center"
                 android:hint="@string/otherNotes"
                 android:inputType="textPersonName"
                 app:layout_constraintBottom_toBottomOf="parent"

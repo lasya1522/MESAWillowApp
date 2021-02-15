@@ -13,7 +13,12 @@
     <color name = "scheme_pastel_purple3">#C7BBFD</color>
 
 
-    <color name="base_color">#ABDEFF</color>
+    <color name="base_color">#45C9EA</color>
+    <color name="base_colorA">#ABDEFF</color>
+    <color name= "base_color2">#C2E2F3</color>
+    <color name= "base_color3">#D4FFFB</color>
+    <color name= "base_color4">#CDD3F3</color>
+
 
     <color name= "mood_color">#E1D4F6</color>
     <color name= "mood_color2">#A88CD8</color>
@@ -26,7 +31,7 @@
     <color name= "sleep_color4">#3E4A8E</color>
 
     <color name= "exercise_color">#DEFAF7</color>
-    <color name= "exercise_color2">#72B6B0</color>
+   <color name= "exercise_color2">#72B6B0</color>
     <color name= "exercise_color3">#538E88</color>
     <color name= "exercise_color4">#3D7A74</color>
 
