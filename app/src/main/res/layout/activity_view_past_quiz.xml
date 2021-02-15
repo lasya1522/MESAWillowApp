@@ -20,7 +20,7 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="Date"
+        android:text="@string/date"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"

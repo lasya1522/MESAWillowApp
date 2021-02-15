@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!--App Titles and Headers -->
     <string name="app_name">Willow</string>
     <string name="title_home">Home</string>
@@ -9,12 +9,13 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textView">TextView</string>
     <string name="morning_quiz">Morning Quiz</string>
-    <string name="todo">TODO</string>
+    <string name="todo" tools:ignore="DuplicateDefinition">TODO</string>
     <string name="sleep">Sleep</string>
 
 
     <!--Titles/Headers -->
     <string name="view_the_daily_quiz">View the Daily Quiz</string>
+    <string name="view_past_quizzes">View Past Quizzes</string>
     <string name="ViewQuizzes">View today\'s quizzes!</string>
     <string name="relax_time">How much time did you spend being productive?</string>
     <string name="relax_timeQ">How much time did you spend relaxing?</string>
@@ -28,16 +29,17 @@
     <string name="stressGoalsInput">Write down your goals! (list below)</string>
     <string name="stressSectionHeader">Stress Section</string>
 
+    <!--Quiz related statements/questions-->
     <string name="question1">1. Rate your mood.</string>
-    <string name="question2">2. Hold long did you sleep last night(hours)?</string>
+    <string name="question2">2. How many hours did you sleep last night?</string>
     <string name="question3">3. Rate your sleep?</string>
-    <string name="question4">4. How much time did you spend being productive(hours)?</string>
-    <string name="question5">5. How much time did you spend relaxing(hours)?</string>
-    <string name="question6">6. How much time did you spend exercising(hours)?</string>
+    <string name="question4">4. How many hours did you spend being productive?</string>
+    <string name="question5">5. How many hours did you spend relaxing?</string>
+    <string name="question6">6. How many hours did you spend exercising?</string>
     <string name="question7">7. Rate your stress levels.</string>
     <string name="question8">8. What contributed to your stress?</string>
     <string name="question9">9. Any other notes about your day</string>
-
+    <string name="your_past_goals">Your past goals:</string>
     <string name="moodRating1">Good</string>
     <string name="rating2">Decent</string>
     <string name="rating3">Bad</string>
@@ -50,6 +52,13 @@
     <string name="hintText">Enter response</string>
     <string name="otherNotes">Enter notes</string>
     <string name="submit">Submit</string>
+    <string name="view_quiz">View Quiz!</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select Date</string>
+
+
+
+
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

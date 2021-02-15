@@ -19,7 +19,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/black">
 
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="36dp"
                 android:layout_gravity="center_horizontal"
-                android:text = "Rate your mood"
+                android:text = "@string/question1"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -120,7 +120,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="10dp"
                         android:gravity="center"
-                        android:text="How many hours did you sleep last night?"
+                        android:text="@string/question2"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -134,12 +134,14 @@
                     <EditText
                         android:id="@+id/et_sleepTime"
                         android:layout_width="328dp"
-                        android:layout_height="47dp"
+                        android:layout_height="0dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:autofillHints="null"
+                        tools:ignore="LabelFor" />
 
                     <TextView
                         android:id="@+id/textView8"
@@ -147,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="10dp"
-                        android:text="Rate your sleep"
+                        android:text="@string/question3"
                         android:textSize="20sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -216,7 +218,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="How many hours did you spend being productive?"
+                android:text="@string/question4"
                 android:gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -231,7 +233,7 @@
             <EditText
                 android:id="@+id/et_productiveTime"
                 android:layout_width="297dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:layout_margin="10dp"
@@ -264,7 +266,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="How many hours did you spend relaxing?"
+                android:text="@string/question5"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -279,7 +281,7 @@
             <EditText
                 android:id="@+id/et_relaxTime"
                 android:layout_width="293dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_margin="10dp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -315,7 +317,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="How many hours did you spend exercising?"
+                android:text="@string/question6"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
@@ -330,14 +332,16 @@
             <EditText
                 android:id="@+id/et_exerciseTime"
                 android:layout_width="295dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:layout_margin="10dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="number" />
+                android:inputType="number"
+                android:importantForAutofill="no"
+                tools:ignore="LabelFor" />
 
         </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -363,7 +367,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Rate your stress level"
+                android:text="@string/question7"
                 android:textSize="20sp"
                 android:layout_margin="10dp"
                 android:gravity="center"
@@ -412,7 +416,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="What contributed to your stress?"
+                android:text="@string/question8"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
@@ -441,7 +445,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="1.0"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                android:importantForAutofill="no" />
 
 
         </LinearLayout>
@@ -468,7 +473,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Any other notes about your day?"
+                android:text="@string/question9"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_margin="10dp"
@@ -496,7 +501,8 @@
                 app:layout_constraintHorizontal_bias="0.213"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.905" />
+                app:layout_constraintVertical_bias="0.905"
+                android:importantForAutofill="no" />
 
         </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -504,7 +510,7 @@
             <Button
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:insetBottom="0dp"
                 android:text="@string/submit"

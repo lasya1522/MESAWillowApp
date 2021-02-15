@@ -25,7 +25,7 @@
         android:id="@+id/btn_viewQuiz"
         android:layout_width="186dp"
         android:layout_height="78dp"
-        android:text="View Quiz!"
+        android:text="@string/view_quiz"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,7 +40,7 @@
         android:layout_height="82dp"
         android:background="@color/scheme_purple_1"
         android:onClick="openDatePicker"
-        android:text="Select Date"
+        android:text="@string/select_date"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,9 +69,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
-
     </ListView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

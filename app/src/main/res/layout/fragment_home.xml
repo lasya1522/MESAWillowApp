@@ -27,7 +27,6 @@
         android:textStyle="bold" />
 
 
-
     <androidx.cardview.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id = "@+id/mood_card"
@@ -51,15 +50,14 @@
         android:stateListAnimator="@null"
         android:layout_gravity="center"
         android:text="@string/view_the_daily_quiz"
-        android:textColor="@color/white"
-      />
+        android:textColor="@color/white" />
+
             <ImageView
                 android:id="@+id/lock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src = "@drawable/ic_locked_foreground"
-                >
-
+                android:contentDescription="@string/todo">
             </ImageView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -74,7 +72,7 @@
             android:layout_marginEnd="24dp"
             android:layout_marginRight="24dp"
             android:layout_marginBottom="32dp"
-            android:text="View Past Quizzes"
+            android:text="@string/view_past_quizzes"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -82,6 +80,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
             app:layout_constraintVertical_bias="0.221" />
+
 
     </LinearLayout>
 

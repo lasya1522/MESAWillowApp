@@ -20,7 +20,7 @@
         android:id="@+id/textView2"
         android:layout_width="136dp"
         android:layout_height="39dp"
-        android:text="Your past goals:"
+        android:text="@string/your_past_goals"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
