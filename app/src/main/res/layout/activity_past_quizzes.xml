@@ -12,7 +12,7 @@
         android:layout_width="201dp"
         android:layout_height="55dp"
         android:gravity="center"
-        android:text="Pick a date!"
+        android:text="@string/pick_a_date"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -55,7 +55,9 @@
         android:id="@+id/datePicker"
         android:layout_width="104dp"
         android:layout_height="82dp"
+        android:contentDescription="@string/date_picker"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/datePickerBtn"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.255"
@@ -70,8 +72,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-    </ListView>
+        app:layout_constraintVertical_bias="0.0"></ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

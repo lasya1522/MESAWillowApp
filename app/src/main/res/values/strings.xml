@@ -12,6 +12,14 @@
     <string name="todo" tools:ignore="DuplicateDefinition">TODO</string>
     <string name="sleep">Sleep</string>
 
+    <!--Getting started with account-->
+    <string name="welcomeLogIn">Welcome!</string>
+    <string name="username">Username</string>
+    <string name="sign_in_to_continue">Sign in to Continue</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_an_account">Create an Account!</string>
+    <string name="email">Email</string>
 
     <!--Titles/Headers -->
     <string name="view_the_daily_quiz">View the Daily Quiz</string>
@@ -30,15 +38,15 @@
     <string name="stressSectionHeader">Stress Section</string>
 
     <!--Quiz related statements/questions-->
-    <string name="question1">1. Rate your mood.</string>
-    <string name="question2">2. How many hours did you sleep last night?</string>
-    <string name="question3">3. Rate your sleep?</string>
-    <string name="question4">4. How many hours did you spend being productive?</string>
-    <string name="question5">5. How many hours did you spend relaxing?</string>
-    <string name="question6">6. How many hours did you spend exercising?</string>
-    <string name="question7">7. Rate your stress levels.</string>
-    <string name="question8">8. What contributed to your stress?</string>
-    <string name="question9">9. Any other notes about your day</string>
+    <string name="question1">Rate your mood.</string>
+    <string name="question2">How many hours did you sleep last night?</string>
+    <string name="question3">Rate your sleep?</string>
+    <string name="question4">How many hours did you spend being productive?</string>
+    <string name="question5">How many hours did you spend relaxing?</string>
+    <string name="question6">How many hours did you spend exercising?</string>
+    <string name="question7">Rate your stress levels.</string>
+    <string name="question8">What contributed to your stress?</string>
+    <string name="question9">Any other notes about your day</string>
     <string name="your_past_goals">Your past goals:</string>
     <string name="moodRating1">Good</string>
     <string name="rating2">Decent</string>
@@ -57,8 +65,6 @@
     <string name="select_date">Select Date</string>
 
 
-
-
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -70,4 +76,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="other">Other</string>
     <string name="stressors">Stressors</string>
+
+    <string name="pick_a_date">Pick a date!</string>
+    <string name="date_picker">Date Picker</string>
+
 </resources>

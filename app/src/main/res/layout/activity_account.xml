@@ -16,7 +16,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal"
-        android:text="Welcome!"
+        android:text="@string/welcomeLogIn"
         android:textColor="#ffffff"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -44,7 +44,7 @@
             android:layout_height="46dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
-            android:hint="Username"
+            android:hint="@string/username"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
             android:textColor="@color/white"
@@ -54,7 +54,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.152" />
+            app:layout_constraintVertical_bias="0.152"
+            android:importantForAutofill="no" />
 
         <EditText
             android:id="@+id/passwordText"
@@ -75,7 +76,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.251" />
+            app:layout_constraintVertical_bias="0.251"
+            android:autofillHints="" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -93,13 +95,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.831"
-            app:srcCompat="@drawable/logo1" />
+            app:srcCompat="@drawable/logo1"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/SignInMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign in to Continue"
+            android:text="@string/sign_in_to_continue"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -115,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Log In"
+            android:text="@string/log_in"
             android:textColor="#ffffff"
             app:backgroundTint="@color/productive_color2"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -130,7 +133,7 @@
             android:layout_width="160dp"
             android:layout_height="59dp"
             android:gravity="center"
-            android:text="Sign Up"
+            android:text="@string/sign_up"
             android:textColor="#ffffff"
             app:backgroundTint="@color/productive_color2"
             app:layout_constraintBottom_toBottomOf="parent"

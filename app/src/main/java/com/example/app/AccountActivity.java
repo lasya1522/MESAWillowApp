@@ -33,38 +33,29 @@ public class AccountActivity extends AppCompatActivity {
         logIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                logIn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(AccountActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                });
                 //set username as "Willow", Password as "test"
-                if(username.getText().equals("willow")){
-                    if(password.getText().toString().equals("test")){
-                        AlertDialog.Builder builder = new AlertDialog.Builder(
-                                AccountActivity.this);
-                        builder.setTitle("Login Succesful!");
-                        builder.setMessage("Welcome Back!");
+                if(username.getText().toString().equals("willow") && password.getText().toString().equals("test")){
+                    AlertDialog.Builder builder = new AlertDialog.Builder(
+                            AccountActivity.this);
+                    builder.setTitle("Login Successful!");
+                    builder.setMessage("Welcome Back!");
 
-                        builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                        AlertDialog alert = builder.create();
-                        alert.show();
-                    }
-                    else{ //invalid toast message
-                        Toast.makeText(getApplicationContext(), "Invalid Username or Password",
-                                Toast.LENGTH_SHORT).show();
-                        //Toast.makeText(AccountActivity.this, "", Toast.LENGTH_SHORT).show();
-                    }
+                    builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    AlertDialog alert = builder.create();
+                    alert.show();
+                    Intent intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
-
-
+                else{ //invalid toast message
+                    Toast.makeText(getApplicationContext(), "Invalid Username or Password",
+                            Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(AccountActivity.this, "", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
