@@ -13,7 +13,8 @@
     <color name = "scheme_pastel_purple3">#C7BBFD</color>
 
 
-    <color name="base_color">#89c2d9</color>
+    <color name="base_color">#48AFD8</color>
+    <color name="base_colorLasya">#89c2d9</color>
     <color name="base_colorA">#ABDEFF</color>
     <color name= "base_color2">#C2E2F3</color>
     <color name= "base_color3">#D4FFFB</color>

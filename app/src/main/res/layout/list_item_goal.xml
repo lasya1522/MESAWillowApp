@@ -15,6 +15,10 @@
              android:id="@+id/cb"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
+             android:background="@color/base_color2"
+             android:textSize="14dp"
+
+
              />
     </androidx.cardview.widget.CardView>
 

@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     >
 
 
@@ -20,7 +21,8 @@
         android:layout_margin="20dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="@string/date"
+        android:text=""
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
@@ -36,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius = "10dp"
-        card_view:cardBackgroundColor="@color/scheme_pastel_blue1"
+        card_view:cardBackgroundColor="@color/base_color2"
         >
 
     <TextView
@@ -59,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius = "10dp"
-        card_view:cardBackgroundColor="@color/scheme_pastel_blue2"
+        card_view:cardBackgroundColor="@color/base_color3"
         >
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius = "10dp"
-        card_view:cardBackgroundColor="@color/scheme_pastel_purple3"
+        card_view:cardBackgroundColor="@color/base_color4"
         >
         <TextView
             android:id="@+id/tv_relaxTime"
@@ -117,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            app:cardBackgroundColor="@color/scheme_pastel_blue1"
+            app:cardBackgroundColor="@color/base_colorLasya"
             app:cardCornerRadius="10dp">
 
             <TextView
@@ -140,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/scheme_pastel_purple"
+            card_view:cardBackgroundColor="@color/base_color2"
             >
 
 
@@ -164,7 +166,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/scheme_pastel_blue1"
+            card_view:cardBackgroundColor="@color/base_color3"
             >
         <LinearLayout
         android:layout_width="match_parent"
@@ -202,7 +204,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             card_view:cardCornerRadius = "10dp"
-            card_view:cardBackgroundColor="@color/scheme_pastel_blue3"
+            card_view:cardBackgroundColor="@color/base_color4"
             >
     <TextView
         android:id="@+id/tv_other"
