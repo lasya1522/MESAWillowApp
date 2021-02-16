@@ -35,12 +35,15 @@ public class AccountActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //set username as "Willow", Password as "test"
                 if(username.getText().toString().equals("willow") && password.getText().toString().equals("test")){
+                    Intent intent = new Intent(AccountActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+                else{
                     AlertDialog.Builder builder = new AlertDialog.Builder(
                             AccountActivity.this);
-                    builder.setTitle("Login Successful!");
-                    builder.setMessage("Welcome Back!");
-
-                    builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                    builder.setTitle("Invalid Login!");
+                    builder.setMessage("The username/password entered is incorrect. Please try again.");
+                    builder.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
@@ -48,12 +51,9 @@ public class AccountActivity extends AppCompatActivity {
                     });
                     AlertDialog alert = builder.create();
                     alert.show();
-                    Intent intent = new Intent(AccountActivity.this, MainActivity.class);
-                    startActivity(intent);
-                }
-                else{ //invalid toast message
-                    Toast.makeText(getApplicationContext(), "Invalid Username or Password",
-                            Toast.LENGTH_SHORT).show();
+                    //invalid toast message
+                    //Toast.makeText(getApplicationContext(), "The username/password entered is incorrect. Please try again.",
+                      //      Toast.LENGTH_SHORT).show();
                     //Toast.makeText(AccountActivity.this, "", Toast.LENGTH_SHORT).show();
                 }
             }
