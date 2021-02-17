@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.app.DailyQuiz;
 import com.example.app.DatabaseHelper;
 import com.example.app.GoalsAdapter;
+import com.example.app.MainActivity;
 import com.example.app.OtherAdapter;
 import com.example.app.R;
 import com.example.app.StressorsAdapter;
@@ -68,6 +73,9 @@ public class TrendsFragment extends Fragment {
     RecyclerView rv_stressors;
     RecyclerView rv_other;
 
+    Spinner s_mood;
+    SpinnerAdapter trends_adapter;
+
     RecyclerView.Adapter stressorsAdapter;
     RecyclerView.Adapter otherAdapter;
 
@@ -104,6 +112,10 @@ public class TrendsFragment extends Fragment {
         rv_other = root.findViewById(R.id.rv_other);
         rv_other.setHasFixedSize(true);
         rv_other.setLayoutManager(new LinearLayoutManager((this.getContext())));
+
+        trends_adapter = ArrayAdapter.createFromResource(this.getContext(), R.array.trends_spinner_values, R.layout.support_simple_spinner_dropdown_item); //support_simple_spinner_dropdown_item?t
+        s_mood = root.findViewById(R.id.s_mood);
+        s_mood.setAdapter(trends_adapter);
 
         dailyQuizData = databaseHelper.getDailyQuizData();
 
@@ -154,7 +166,7 @@ public class TrendsFragment extends Fragment {
             if (dailyQuizData.size() > 6) {
 
                 for (int i = 6; i >= 0; i--) {
-                    moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                   // moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
 
                     sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
 
@@ -180,7 +192,7 @@ public class TrendsFragment extends Fragment {
             } else {
 
                 for (int i = dailyQuizData.size()-1; i >= 0; i--) {
-                    moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                   // moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
 
                     sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
 
@@ -204,12 +216,14 @@ public class TrendsFragment extends Fragment {
                 }
 
             }
-            List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
+            /*List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
             if (moodFreqData.get(0) != 0) moodEntries.add(new PieEntry(moodFreqData.get(0), "Good"));
             if (moodFreqData.get(1) != 0) moodEntries.add(new PieEntry(moodFreqData.get(1), "Decent"));
             if (moodFreqData.get(2) != 0) moodEntries.add(new PieEntry(moodFreqData.get(2), "Bad"));
             PieDataSet moodSet = new PieDataSet(moodEntries, "Mood");
             PieData moodData = new PieData(moodSet);
+
+             */
 
             List<Integer> sleepRatingFreqData = getFreq(sleepRatingList, "Good", "Decent", "Bad");
             if (sleepRatingFreqData.get(0) != 0) sleepRatingEntries.add(new PieEntry(sleepRatingFreqData.get(0), "Good"));
@@ -267,8 +281,8 @@ public class TrendsFragment extends Fragment {
             Legend moodLegend = chart_mood.getLegend();
             moodLegend.setEnabled(false);
 
-            moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, this.getContext());
-            moodSet.setDrawValues(false);
+            //moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, this.getContext());
+           // moodSet.setDrawValues(false);
 
             chart_mood.setHoleRadius(0);
             chart_mood.setTransparentCircleAlpha(0);
@@ -506,8 +520,8 @@ public class TrendsFragment extends Fragment {
 
             //********** SETTING DATA **********
 
-            chart_mood.setData(moodData);
-            chart_mood.invalidate();
+           // chart_mood.setData(moodData);
+           // chart_mood.invalidate();
 
             chart_sleepRating.setData(sleepRatingData);
             chart_sleepRating.invalidate();
@@ -558,6 +572,50 @@ public class TrendsFragment extends Fragment {
             rv_other.setAdapter(otherAdapter);
 
         }
+
+        //******** SPINNERS*********** //
+
+        s_mood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int p, long id) {
+                if (parent.getItemAtPosition(p).equals("past 7 days")){
+                    if (dailyQuizData.size() > 7) {
+                        for (int i = 6; i >= 0; i--) {
+                            moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                        }
+                    } else {
+                        for (int i = dailyQuizData.size(); i >= 0; i--){
+                            moodList.add(dailyQuizData.get(dailyQuizData.size()-1-i).getMood());
+                        }
+                    }
+                } else if (parent.getItemAtPosition(p).equals("past 30 days")){
+                    if (dailyQuizData.size() > 30) {
+                        for (int i = 29; i >= 0; i--) {
+                            moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                        }
+                    } else {
+                        for (int i = dailyQuizData.size(); i >= 0; i--){
+                            moodList.add(dailyQuizData.get(dailyQuizData.size()-1-i).getMood());
+                        }
+                    }
+                } else if (parent.getItemAtPosition(p).equals("all time")){
+                    for (int i = dailyQuizData.size(); i >= 0; i--){
+                        moodList.add(dailyQuizData.get(dailyQuizData.size()-1-i).getMood());
+                    }
+                }
+                List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
+                if (moodFreqData.get(0) != 0) moodEntries.add(new PieEntry(moodFreqData.get(0), "Good"));
+                if (moodFreqData.get(1) != 0) moodEntries.add(new PieEntry(moodFreqData.get(1), "Decent"));
+                if (moodFreqData.get(2) != 0) moodEntries.add(new PieEntry(moodFreqData.get(2), "Bad"));
+                PieDataSet moodSet = new PieDataSet(moodEntries, "Mood");
+                moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, getActivity());
+                moodSet.setDrawValues(false);
+                PieData moodData = new PieData(moodSet);
+                chart_mood.setData(moodData);
+                chart_mood.invalidate();
+            }
+        });
+
         return root;
     }
 
@@ -604,6 +662,7 @@ public class TrendsFragment extends Fragment {
 
         }
         return mode;
+
    }
 
    private int calculateRange(ArrayList<Integer> list){
@@ -648,5 +707,6 @@ public class TrendsFragment extends Fragment {
 
        return counter;
     }
+
 
     }
