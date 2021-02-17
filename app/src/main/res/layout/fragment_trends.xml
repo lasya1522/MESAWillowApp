@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                card_view:cardBackgroundColor="@color/base_color2"
+                card_view:cardBackgroundColor="@color/mood_bgColor"
                 card_view:cardCornerRadius="15dp">
 
                 <TextView
@@ -147,7 +147,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                card_view:cardBackgroundColor="@color/base_color3"
+                card_view:cardBackgroundColor="@color/productive_bgColor"
                 card_view:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -191,7 +191,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                card_view:cardBackgroundColor="@color/base_color2"
+                card_view:cardBackgroundColor="@color/relax_bgColor"
                 card_view:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -278,7 +278,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                card_view:cardBackgroundColor="@color/base_color3"
+                card_view:cardBackgroundColor="#AEE4CF"
                 card_view:cardCornerRadius="15dp">
 
                 <TextView
@@ -304,7 +304,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                card_view:cardBackgroundColor="@color/base_color3"
+                card_view:cardBackgroundColor="#AEE4CF"
                 card_view:cardCornerRadius="15dp">
 
                 <LinearLayout
@@ -338,7 +338,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="5dp"
-                card_view:cardBackgroundColor="@color/base_color2"
+                card_view:cardBackgroundColor="@color/other_color"
                 card_view:cardCornerRadius="15dp">
 
                 <LinearLayout

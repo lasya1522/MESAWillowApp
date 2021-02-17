@@ -20,6 +20,8 @@
     <color name= "base_color3">#D4FFFB</color>
     <color name= "base_color4">#CDD3F3</color>
 
+    <!--#ddc6dd//light magenta purple-->
+    <color name= "mood_bgColor">#eee2ee</color>
 
     <color name= "mood_color">#b392ac</color>
     <color name= "mood_color2">#d1b3c4</color>
@@ -31,31 +33,42 @@
     <color name= "sleep_color3">#616EBA</color>
     <color name= "sleep_color4">#3E4A8E</color>
 
-    <color name= "exercise_color">#DEFAF7</color>
+    <!--<color name= "exercise_color">#DEFAF7</color>
    <color name= "exercise_color2">#72B6B0</color>
     <color name= "exercise_color3">#538E88</color>
-    <color name= "exercise_color4">#3D7A74</color>
+    <color name= "exercise_color4">#3D7A74</color>-->
 
+    <color name= "exercise_color2">#907ad6</color>
+    <color name = "exercise_color3">#c0a7eb</color>
+    <color name = "exercise_color4">#a594f9</color>
+
+    <color name= "productive_bgColor">#cee5ff</color>
     <color name= "productive_color">#C2E2F3</color>
     <color name= "productive_color2">#74AFCA</color>
     <color name= "productive_color3">#4496BC</color>
     <color name= "productive_color4">#1693CC</color>
 
+    <!--<color name= "relax_color2">#bfd7ff</color>
+    <color name= "relax_color3">#d6e5ff</color>
+    <color name= "relax_color4">#c2d8ff</color>
+    a2d2ff-(maybe bg)-->
+
+    <color name= "relax_bgColor">#ccdbfd</color>
     <color name= "relax_color">#F0DAF4</color>
-    <color name= "relax_color2">#C78BD1</color>
-    <color name= "relax_color3">#C673D5</color>
-    <color name= "relax_color4">#AF5DBD</color>
+    <color name= "relax_color2">#99beff</color>
+    <color name= "relax_color3">#9bb1ff</color>
+    <color name= "relax_color4">#8cabff</color>-->
 
-    <color name= "stress_color">#E2F6E3</color>
-    <color name= "stress_color2">#99D89B</color>
-    <color name= "stress_color3">#7BCD7E</color>
-    <color name= "stress_color4">#6DF172</color>
 
-    <color name= "other_color">#ECE3FD</color>
+    <color name= "stress_bgColor">#AEE4CF</color>
+    <color name= "stress_color2">#83c5be</color>
+    <color name= "stress_color3">#4E797E</color>
+    <color name= "stress_color4">#b8f2e6</color>
+
+    <color name= "other_color">#DAADAB</color>
     <color name= "other_color2">#876BBA</color>
     <color name= "other_color3">#685093</color>
     <color name= "other_color4">#685093</color>
-
 
     <color name= "purple_graph_1">#BFB3EA</color>
     <color name= "purple_graph_2">#B192E4</color>
