@@ -74,7 +74,11 @@ public class TrendsFragment extends Fragment {
     RecyclerView rv_other;
 
     Spinner s_mood;
+    Spinner s_sleepQuality;
+    Spinner s_stressLevel;
+
     SpinnerAdapter trends_adapter;
+
 
     RecyclerView.Adapter stressorsAdapter;
     RecyclerView.Adapter otherAdapter;
@@ -115,7 +119,12 @@ public class TrendsFragment extends Fragment {
 
         trends_adapter = ArrayAdapter.createFromResource(this.getContext(), R.array.trends_spinner_values, R.layout.support_simple_spinner_dropdown_item); //support_simple_spinner_dropdown_item?t
         s_mood = root.findViewById(R.id.s_mood);
+        s_sleepQuality = root.findViewById(R.id.s_sleepQuality);
+        s_stressLevel = root.findViewById(R.id.s_stressLevel);
+
         s_mood.setAdapter(trends_adapter);
+        s_sleepQuality.setAdapter(trends_adapter);
+        s_stressLevel.setAdapter(trends_adapter);
 
         dailyQuizData = databaseHelper.getDailyQuizData();
 
@@ -575,7 +584,7 @@ public class TrendsFragment extends Fragment {
 
         //******** SPINNERS*********** //
 
-        s_mood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* s_mood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int p, long id) {
                 if (parent.getItemAtPosition(p).equals("past 7 days")){
@@ -615,6 +624,8 @@ public class TrendsFragment extends Fragment {
                 chart_mood.invalidate();
             }
         });
+
+        */
 
         return root;
     }

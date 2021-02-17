@@ -100,8 +100,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
-
                     <TextView
                         android:id="@+id/sleepTimeBarTitle"
                         android:layout_width="match_parent"
@@ -146,6 +144,16 @@
                 card_view:cardBackgroundColor="@color/base_color4"
                 card_view:cardCornerRadius="15dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/textView23"
                     android:layout_width="match_parent"
@@ -155,11 +163,24 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:id="@+id/s_sleepQuality">
+
+                </Spinner>
+
+                </LinearLayout>
+
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/chart_sleepRating"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_margin="20dp" />
+
+                </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
@@ -303,6 +324,17 @@
                 card_view:cardBackgroundColor="#AEE4CF"
                 card_view:cardCornerRadius="15dp">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
                 <TextView
                     android:id="@+id/textView22"
                     android:layout_width="match_parent"
@@ -312,11 +344,23 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:id="@+id/s_stressLevel">
+
+                </Spinner>
+
+                </LinearLayout>
+
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/chart_stressLevel"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_margin="20dp" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
