@@ -12,14 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
+        <activity android:name=".Settings"></activity>
         <activity android:name=".AccountActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity">
-        </activity>
+        <activity android:name=".SignUpActivity"></activity>
         <activity
             android:name=".DailyQuizActivity"
             android:label="Daily Quiz"
@@ -33,9 +34,7 @@
             android:parentActivityName=".PastGoalsActivity" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name"></activity>
 
         <receiver android:name=".ReminderBroadcast" />
         <receiver android:name=".AlertReceiver" />
