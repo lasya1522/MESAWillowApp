@@ -1,5 +1,6 @@
 package com.example.app.ui.trends_tab;
 
+import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -48,7 +49,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class TrendsFragment extends Fragment {
+public class TrendsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
 
     private TrendsViewModel trendsViewModel;
     //create references to buttons
@@ -74,11 +75,19 @@ public class TrendsFragment extends Fragment {
     RecyclerView rv_other;
 
     Spinner s_mood;
-    Spinner s_sleepQuality;
+    Spinner s_sleepQuality; // change to s_sleepRating
     Spinner s_stressLevel;
 
     SpinnerAdapter trends_adapter;
 
+    List<PieEntry> moodEntries;
+    ArrayList<String> moodList;
+
+    List<PieEntry> sleepRatingEntries;
+    ArrayList<String> sleepRatingList;
+
+    List<PieEntry> stressLevelEntries;
+    ArrayList<String> stressLevelList;
 
     RecyclerView.Adapter stressorsAdapter;
     RecyclerView.Adapter otherAdapter;
@@ -130,14 +139,14 @@ public class TrendsFragment extends Fragment {
 
         //******** RETRIEVING DATA *******//
 
-        List<PieEntry> moodEntries = new ArrayList<>();
-        ArrayList<String> moodList = new ArrayList<>();
+        moodEntries = new ArrayList<>();
+        moodList = new ArrayList<>();
 
-        List<PieEntry> sleepRatingEntries = new ArrayList<>();
-        ArrayList<String> sleepRatingList = new ArrayList<>();
+        sleepRatingEntries = new ArrayList<>();
+        sleepRatingList = new ArrayList<>();
 
-        List<PieEntry> stressLevelEntries = new ArrayList<>();
-        ArrayList<String> stressLevelList = new ArrayList<>();
+        stressLevelEntries = new ArrayList<>();
+        stressLevelList = new ArrayList<>();
 
         List<BarEntry> sleepTimeEntries = new ArrayList<>();
         ArrayList<Integer> sleepTimeList = new ArrayList<>();
@@ -177,9 +186,9 @@ public class TrendsFragment extends Fragment {
                 for (int i = 6; i >= 0; i--) {
                    // moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
 
-                    sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+                   // sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
 
-                    stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+                   // stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
 
                     sleepTimeEntries.add(new BarEntry(6-i, dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepTime()));
                     sleepTimeList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepTime());
@@ -203,9 +212,9 @@ public class TrendsFragment extends Fragment {
                 for (int i = dailyQuizData.size()-1; i >= 0; i--) {
                    // moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
 
-                    sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+                   // sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
 
-                    stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+                   // stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
 
                     sleepTimeEntries.add(new BarEntry(6-i, dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepTime()));
                     sleepTimeList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepTime());
@@ -225,14 +234,14 @@ public class TrendsFragment extends Fragment {
                 }
 
             }
-            /*List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
+
+
+            List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
             if (moodFreqData.get(0) != 0) moodEntries.add(new PieEntry(moodFreqData.get(0), "Good"));
             if (moodFreqData.get(1) != 0) moodEntries.add(new PieEntry(moodFreqData.get(1), "Decent"));
             if (moodFreqData.get(2) != 0) moodEntries.add(new PieEntry(moodFreqData.get(2), "Bad"));
             PieDataSet moodSet = new PieDataSet(moodEntries, "Mood");
             PieData moodData = new PieData(moodSet);
-
-             */
 
             List<Integer> sleepRatingFreqData = getFreq(sleepRatingList, "Good", "Decent", "Bad");
             if (sleepRatingFreqData.get(0) != 0) sleepRatingEntries.add(new PieEntry(sleepRatingFreqData.get(0), "Good"));
@@ -290,8 +299,8 @@ public class TrendsFragment extends Fragment {
             Legend moodLegend = chart_mood.getLegend();
             moodLegend.setEnabled(false);
 
-            //moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, this.getContext());
-           // moodSet.setDrawValues(false);
+            moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, this.getContext());
+            moodSet.setDrawValues(false);
 
             chart_mood.setHoleRadius(0);
             chart_mood.setTransparentCircleAlpha(0);
@@ -529,8 +538,8 @@ public class TrendsFragment extends Fragment {
 
             //********** SETTING DATA **********
 
-           // chart_mood.setData(moodData);
-           // chart_mood.invalidate();
+            chart_mood.setData(moodData);
+            chart_mood.invalidate();
 
             chart_sleepRating.setData(sleepRatingData);
             chart_sleepRating.invalidate();
@@ -584,48 +593,9 @@ public class TrendsFragment extends Fragment {
 
         //******** SPINNERS*********** //
 
-       /* s_mood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int p, long id) {
-                if (parent.getItemAtPosition(p).equals("past 7 days")){
-                    if (dailyQuizData.size() > 7) {
-                        for (int i = 6; i >= 0; i--) {
-                            moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
-                        }
-                    } else {
-                        for (int i = dailyQuizData.size(); i >= 0; i--){
-                            moodList.add(dailyQuizData.get(dailyQuizData.size()-1-i).getMood());
-                        }
-                    }
-                } else if (parent.getItemAtPosition(p).equals("past 30 days")){
-                    if (dailyQuizData.size() > 30) {
-                        for (int i = 29; i >= 0; i--) {
-                            moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
-                        }
-                    } else {
-                        for (int i = dailyQuizData.size(); i >= 0; i--){
-                            moodList.add(dailyQuizData.get(dailyQuizData.size()-1-i).getMood());
-                        }
-                    }
-                } else if (parent.getItemAtPosition(p).equals("all time")){
-                    for (int i = dailyQuizData.size(); i >= 0; i--){
-                        moodList.add(dailyQuizData.get(dailyQuizData.size()-1-i).getMood());
-                    }
-                }
-                List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
-                if (moodFreqData.get(0) != 0) moodEntries.add(new PieEntry(moodFreqData.get(0), "Good"));
-                if (moodFreqData.get(1) != 0) moodEntries.add(new PieEntry(moodFreqData.get(1), "Decent"));
-                if (moodFreqData.get(2) != 0) moodEntries.add(new PieEntry(moodFreqData.get(2), "Bad"));
-                PieDataSet moodSet = new PieDataSet(moodEntries, "Mood");
-                moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, getActivity());
-                moodSet.setDrawValues(false);
-                PieData moodData = new PieData(moodSet);
-                chart_mood.setData(moodData);
-                chart_mood.invalidate();
-            }
-        });
-
-        */
+        s_mood.setOnItemSelectedListener(this);
+        s_sleepQuality.setOnItemSelectedListener(this);
+        s_stressLevel.setOnItemSelectedListener(this);
 
         return root;
     }
@@ -720,4 +690,147 @@ public class TrendsFragment extends Fragment {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int p, long id) {
+
+       if (parent.equals(s_mood)) {
+
+           moodEntries = new ArrayList<>();
+           moodList = new ArrayList<>();
+
+           if (parent.getItemAtPosition(p).equals("past 7 days")) {
+               if (dailyQuizData.size() > 7) {
+                   for (int i = 6; i >= 0; i--) {
+                       moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                   }
+               } else {
+                   for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                       moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                   }
+               }
+           } else if (parent.getItemAtPosition(p).equals("past 30 days")) {
+               if (dailyQuizData.size() > 30) {
+                   for (int i = 29; i >= 0; i--) {
+                       moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                   }
+               } else {
+                   for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                       moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+                   }
+               }
+           } else if (parent.getItemAtPosition(p).equals("all time")) {
+               for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                   moodList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getMood());
+               }
+           }
+
+           List<Integer> moodFreqData = getFreq(moodList, "Good", "Decent", "Bad");
+           if (moodFreqData.get(0) != 0) moodEntries.add(new PieEntry(moodFreqData.get(0), "Good"));
+           if (moodFreqData.get(1) != 0)
+               moodEntries.add(new PieEntry(moodFreqData.get(1), "Decent"));
+           if (moodFreqData.get(2) != 0) moodEntries.add(new PieEntry(moodFreqData.get(2), "Bad"));
+           PieDataSet moodSet = new PieDataSet(moodEntries, "Mood");
+           moodSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, getActivity());
+           moodSet.setDrawValues(false);
+           PieData moodData = new PieData(moodSet);
+           chart_mood.setData(moodData);
+           chart_mood.invalidate();
+
+
+       } else if (parent.equals(s_sleepQuality)){
+
+           sleepRatingEntries = new ArrayList<>();
+           sleepRatingList = new ArrayList<>();
+
+           if (parent.getItemAtPosition(p).equals("past 7 days")) {
+               if (dailyQuizData.size() > 7) {
+                   for (int i = 6; i >= 0; i--) {
+                       sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+                   }
+               } else {
+                   for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                       sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+                   }
+               }
+           } else if (parent.getItemAtPosition(p).equals("past 30 days")) {
+               if (dailyQuizData.size() > 30) {
+                   for (int i = 29; i >= 0; i--) {
+                       sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+                   }
+               } else {
+                   for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                       sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+                   }
+               }
+           } else if (parent.getItemAtPosition(p).equals("all time")) {
+               for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                   sleepRatingList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getSleepRating());
+               }
+           }
+
+           List<Integer> sleepRatingFreqData = getFreq (sleepRatingList, "Good", "Decent", "Bad");
+           if (sleepRatingFreqData.get(0) != 0) sleepRatingEntries.add(new PieEntry(sleepRatingFreqData.get(0), "Good"));
+           if (sleepRatingFreqData.get(1) != 0)
+               sleepRatingEntries.add(new PieEntry(sleepRatingFreqData.get(1), "Decent"));
+           if (sleepRatingFreqData.get(2) != 0) sleepRatingEntries.add(new PieEntry(sleepRatingFreqData.get(2), "Bad"));
+           PieDataSet sleepRatingSet = new PieDataSet(sleepRatingEntries, "Sleep Rating");
+           sleepRatingSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, getActivity());
+           sleepRatingSet.setDrawValues(false);
+           PieData sleepRatingData = new PieData(sleepRatingSet);
+           chart_sleepRating.setData(sleepRatingData);
+           chart_sleepRating.invalidate();
+
+       } else if (parent.equals(s_stressLevel)) {
+
+           stressLevelEntries = new ArrayList<>();
+           stressLevelList = new ArrayList<>();
+
+           if (parent.getItemAtPosition(p).equals("past 7 days")) {
+               if (dailyQuizData.size() > 7) {
+                   for (int i = 6; i >= 0; i--) {
+                       stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+                   }
+               } else {
+                   for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                       stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+                   }
+               }
+           } else if (parent.getItemAtPosition(p).equals("past 30 days")) {
+               if (dailyQuizData.size() > 30) {
+                   for (int i = 29; i >= 0; i--) {
+                       stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+                   }
+               } else {
+                   for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                       stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+                   }
+               }
+           } else if (parent.getItemAtPosition(p).equals("all time")) {
+               for (int i = dailyQuizData.size() - 1; i >= 0; i--) {
+                   stressLevelList.add(dailyQuizData.get(dailyQuizData.size() - 1 - i).getStressLevel());
+               }
+           }
+
+           List<Integer> stressLevelFreqData = getFreq(stressLevelList, "Good", "Decent", "Bad");
+           if (stressLevelFreqData.get(0) != 0)
+               stressLevelEntries.add(new PieEntry(stressLevelFreqData.get(0), "Good"));
+           if (stressLevelFreqData.get(1) != 0)
+               stressLevelEntries.add(new PieEntry(stressLevelFreqData.get(1), "Decent"));
+           if (stressLevelFreqData.get(2) != 0)
+               stressLevelEntries.add(new PieEntry(stressLevelFreqData.get(2), "Bad"));
+           PieDataSet stressLevelSet = new PieDataSet(stressLevelEntries, "Stress Level");
+           stressLevelSet.setColors(new int[]{R.color.mood_color2, R.color.mood_color3, R.color.mood_color4}, getActivity());
+           stressLevelSet.setDrawValues(false);
+           PieData stressLevelData = new PieData(stressLevelSet);
+           chart_stressLevel.setData(stressLevelData);
+           chart_stressLevel.invalidate();
+       }
+
     }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
+}
+
