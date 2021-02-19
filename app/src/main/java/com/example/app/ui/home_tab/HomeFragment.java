@@ -23,6 +23,7 @@ import com.example.app.DailyQuizActivity;
 import com.example.app.DatabaseHelper;
 import com.example.app.PastQuizzesActivity;
 import com.example.app.R;
+import com.example.app.SettingsActivity;
 
 import java.util.Calendar;
 
@@ -37,8 +38,10 @@ public class HomeFragment extends Fragment {
     Button btn_viewPastQuizzes; //Previous quiz button
     Button btn_dailyQuiz;
 
-    DatabaseHelper databaseHelper;
+    Button btn_settings;
 
+
+    DatabaseHelper databaseHelper;
 
     ImageView lock;
 
@@ -52,6 +55,7 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         btn_dailyQuiz = root.findViewById(R.id.viewQuiz);
+        btn_settings = root.findViewById(R.id.btn_settings);
         lock = root.findViewById(R.id.lock);
 
 
@@ -78,6 +82,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), PastQuizzesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SettingsActivity.class);
                 startActivity(intent);
             }
         });
