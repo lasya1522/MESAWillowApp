@@ -27,7 +27,7 @@ import androidx.navigation.ui.NavigationUI;
 import java.text.DateFormat;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class MainActivity extends AppCompatActivity {
     SettingsFragment sf;
     TextView tv_viewAlarmTime;
     private Button button; //Daily quiz button
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
         startActivity(browserIntent);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+   /* @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
         c = Calendar.getInstance();
         c.set(Calendar.HOUR_OF_DAY, hourOfDay);
@@ -75,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements TimePickerDialog.
       //  sf.updateTimeText(c);
       //  sf.startAlarm(c);
     }
+
+    */
 
     public void updateTimeText(Calendar c) {
         String timeText = "Alarm set for: ";
