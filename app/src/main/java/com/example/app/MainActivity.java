@@ -31,12 +31,14 @@ public class MainActivity extends AppCompatActivity {
     SettingsFragment sf;
     TextView tv_viewAlarmTime;
     private Button button; //Daily quiz button
+    private Button settingBtn;
     public static Calendar c; // public static?
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
        // sf = (SettingsFragment) this.getSupportFragmentManager().findFragmentByTag("fragment_settings");
 
         tv_viewAlarmTime = findViewById(R.id.tv_viewAlarmTime);

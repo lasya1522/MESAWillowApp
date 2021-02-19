@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Stuff we are not using-->
     <color name= "scheme_blue_1"> #2AB7CA</color>
     <color name= "scheme_blue_2"> #5C5D8D</color>
     <color name= "scheme_purple_1">#A780D5</color>
@@ -22,7 +23,6 @@
 
     <!--#ddc6dd//light magenta purple-->
     <color name= "mood_bgColor">#eee2ee</color>
-
     <color name= "mood_color">#b392ac</color>
     <color name= "mood_color2">#d1b3c4</color>
     <color name= "mood_color3">#e8c2ca</color>
@@ -65,7 +65,7 @@
     <color name= "stress_color3">#4E797E</color>
     <color name= "stress_color4">#b8f2e6</color>
 
-    <color name= "other_color">#DAADAB</color>
+    <color name= "other_color">#FADCD9</color>
     <color name= "other_color2">#876BBA</color>
     <color name= "other_color3">#685093</color>
     <color name= "other_color4">#685093</color>
@@ -78,10 +78,14 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
 
+    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="purple_550" />
+
+    <color name="mainBackground">#ffffff</color>
+    <color name="mainTextColor">#FF000000</color>
+
+
     <color name="blue_800">#1E2964</color>
     <color name="blue_880">#222368</color>
 

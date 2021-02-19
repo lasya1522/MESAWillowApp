@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="@color/mainBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,9 +15,9 @@
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
-            android:layout_height="39dp"
+            android:layout_height="39sp"
             android:text="@string/your_past_goals"
-            android:textColor="@color/white"
+            android:textColor="@color/mainTextColor"
             android:textSize="30sp"
             android:textStyle="bold"
             android:layout_gravity="center" />

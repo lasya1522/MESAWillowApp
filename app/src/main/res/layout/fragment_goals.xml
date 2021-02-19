@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/mainBackground"
     tools:context=".ui.goals_tab.GoalsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/addGoal_card"
@@ -26,71 +27,71 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
-            <EditText
-                android:id="@+id/et_goal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="Add a goal"
-                />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_addGoal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="add"
-                android:textColor="#FFFFFF" />
-        </LinearLayout>
-            <Button
-                android:id="@+id/btn_pastGoals"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="View Completed Goals"
-                android:textColor="#FFFFFF"
-                android:layout_gravity="center"
-                />
+                    <EditText
+                        android:id="@+id/et_goal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Add a goal" />
+
+                    <Button
+                        android:id="@+id/btn_addGoal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="add"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_pastGoals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="View Completed Goals"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/sleepTime_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="10dp"
-        app:cardBackgroundColor="@color/base_color2"
-        app:cardCornerRadius="15dp">
-
-
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sleepTime_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/base_color2"
+            app:cardCornerRadius="15dp">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_currentGoals"
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="275dp"
-                android:layout_gravity="center"
-                android:overScrollMode="never" />
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_currentGoals"
+                    android:layout_width="match_parent"
+                    android:layout_height="275dp"
+                    android:layout_gravity="center"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/btn_complete"
@@ -106,8 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:text="delete"
-                android:textColor="#FFFFFF"
-                />
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
 
