@@ -1,4 +1,3 @@
-
 package com.example.app;
 
 import android.content.BroadcastReceiver;

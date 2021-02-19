@@ -21,8 +21,10 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.app.DailyQuiz;
 import com.example.app.DailyQuizActivity;
 import com.example.app.DatabaseHelper;
+import com.example.app.MainActivity;
 import com.example.app.PastQuizzesActivity;
 import com.example.app.R;
+import com.example.app.Settings;
 
 import java.util.Calendar;
 
@@ -33,10 +35,11 @@ public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     private Button button; //Daily quiz button
+   // private Button settingBtn;
 
     Button btn_viewPastQuizzes; //Previous quiz button
     Button btn_dailyQuiz;
-
+   // Button btn_settingBtn;
     DatabaseHelper databaseHelper;
 
 
@@ -53,7 +56,7 @@ public class HomeFragment extends Fragment {
 
         btn_dailyQuiz = root.findViewById(R.id.viewQuiz);
         lock = root.findViewById(R.id.lock);
-
+        //takes to setting activity
 
         databaseHelper = new DatabaseHelper(this.getContext());
         if (databaseHelper.getDailyQuiz(getTodayDate()).getDate().equals("")){
@@ -61,6 +64,17 @@ public class HomeFragment extends Fragment {
         } else {
             lock.setImageResource(R.drawable.ic_locked_foreground);
         }
+
+        //setting button
+        //btn_settingBtn = root.findViewById(R.id.settingBtn);
+        //btn_settingBtn.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View v) {
+
+               // Intent intent = new Intent(getActivity(), Settings.class);
+                //startActivity(intent);
+            //}
+        //});
 
         btn_dailyQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
