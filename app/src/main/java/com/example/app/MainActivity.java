@@ -39,10 +39,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // sf = (SettingsFragment) this.getSupportFragmentManager().findFragmentByTag("fragment_settings");
 
         tv_viewAlarmTime = findViewById(R.id.tv_viewAlarmTime);
-      //  c = Calendar.getInstance();
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

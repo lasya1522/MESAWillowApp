@@ -6,8 +6,7 @@
     android:id="@+id/btn_help"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.JournalFragment"
-    android:background="@color/black">
+    tools:context=".ui.JournalFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="\n About Willow"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +58,7 @@
                 android:layout_height="35dp"
                 android:layout_gravity="center_horizontal"
                 android:text="Remind me to take the Daily Quiz!"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="@+id/btn_clearData"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -97,8 +96,7 @@
                 android:layout_marginBottom="30dp"
                 android:text="No Alarm set"
                 android:layout_gravity="center"
-                android:textColor="@color/base_color4"
-
+                android:textColor="@color/black"
                 android:textSize="30sp" />
 
             <Button
